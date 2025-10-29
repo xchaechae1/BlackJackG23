@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BlackJackGUI" default="default" basedir=".">
+    <description>Builds, tests, and runs the project BlackJackGUI.</description>
+    
+    <!-- Define Derby library path -->
+    <property name="lib.dir" value="lib"/>
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+    
+    <import file="nbproject/build-impl.xml"/>
+    
+    <!-- Override the run target to include Derby in classpath -->
+    <target name="run" depends="jar">
+        <java fork="true" classname="${main.class}">
+            <classpath>
+                <path refid="classpath"/>
+                <path location="${dist.jar}"/>
+            </classpath>
+        </java>
+    </target>
+    
+    <!-- Override the debug target to include Derby in classpath -->
+    <target name="debug" depends="jar">
+        <java fork="true" classname="${main.class}">
+            <jvmarg value="-Xdebug"/>
+            <jvmarg value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=${debug.port}"/>
+            <classpath>
+                <path refid="classpath"/>
+                <path location="${dist.jar}"/>
+            </classpath>
+        </java>
+    </target>
+    
+    <!-- Override the jar target to include Derby in manifest -->
+    <target name="-post-jar">
+        <jar update="true" destfile="${dist.jar}">
+            <manifest>
+                <attribute name="Class-Path" value="lib/derby.jar lib/derbytools.jar"/>
+            </manifest>
+        </jar>
+    </target>
+</project>
