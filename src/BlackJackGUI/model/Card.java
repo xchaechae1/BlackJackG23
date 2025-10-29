@@ -1,5 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package BlackJackGUI.model;
-
+/**
+ *
+ * @author nicho
+ */
 
 public class Card {
     private String suit; //the suit of the card

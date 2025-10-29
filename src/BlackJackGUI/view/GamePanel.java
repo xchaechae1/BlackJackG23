@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package BlackJackGUI.view;
 
 import BlackJackGUI.controller.GameControl;
@@ -6,6 +10,14 @@ import BlackJackGUI.model.Card;
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
+
+
+/**
+ *
+ * @author nicho
+ */
+
+
 
 public class GamePanel extends JPanel {
     private GameControl controller;

@@ -1,9 +1,18 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package BlackJackGUI.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
+/**
+ *
+ * @author nicho
+ */
 public class Deck {
     private List<Card> cards; //list to hold all cards in the deck
     private final String[] SUITS = {"Hearts", "Diamonds", "Clubs", "Spades"}; //all possible suits

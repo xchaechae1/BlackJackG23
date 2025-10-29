@@ -1,9 +1,16 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package BlackJackGUI.view;
 
 import BlackJackGUI.controller.GameControl;
 import javax.swing.*;
 import java.awt.*;
-
+/**
+ *
+ * @author nicho
+ */
 public class BlackJackGUI extends JFrame {
     private CardLayout cardLayout; //manages panel switching
     private JPanel mainPanel; //main container for card layout
@@ -15,6 +22,7 @@ public class BlackJackGUI extends JFrame {
     public static final Color HOVER_BLUE = new Color(80, 130, 200);
     public static final Color TEXT_COLOR = new Color(60, 60, 60);
     public static final Color CARD_BACKGROUND = Color.WHITE;
+    
     
     public BlackJackGUI() {
         setTitle("BlackJack");

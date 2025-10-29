@@ -1,11 +1,20 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package BlackJackGUI.view;
 
 import BlackJackGUI.controller.GameControl;
 import javax.swing.*;
 import java.awt.*; //gbc (grid bag constraints)
- 
+ /**
+ *
+ * @author nicho
+ */
 
 public class LoginPanel extends JPanel {
+    
+    
     public LoginPanel(GameControl controller) {
         setBackground(BlackJackGUI.BACKGROUND_COLOR);
         setLayout(new GridBagLayout());
@@ -26,6 +35,8 @@ public class LoginPanel extends JPanel {
             BorderFactory.createLineBorder(new Color(220, 220, 220), 1),
             BorderFactory.createEmptyBorder(40, 60, 40, 60)
         ));
+        
+        
         //layout components in card panel
         gbc.gridy = 0; card.add(title, gbc);
         gbc.gridy++; card.add(new JLabel("Username:"), gbc);

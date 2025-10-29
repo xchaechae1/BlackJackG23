@@ -1,8 +1,15 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package BlackJackGUI.model;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ *
+ * @author nicho
+ */
 public class BlackJack {
     private Deck deck;
     private List<Card> playerHand;
@@ -135,26 +142,7 @@ public class BlackJack {
         return hasAce && hasTenValue && playerScore == 21; //natural blackjack conditions
     }
 
-    //debug method to show blackjack status
-    public String getBlackjackDebugInfo() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Blackjack Debug: ");
-        sb.append("cardsDealt=").append(cardsDealt);
-        sb.append(", playerHandSize=").append(playerHand.size());
-        sb.append(", playerScore=").append(playerScore);
-        sb.append(", dealerTurn=").append(dealerTurn);
-        sb.append(", hasBlackjack=").append(hasBlackjack());
-        sb.append(", hasNaturalBlackjack=").append(hasNaturalBlackjack());
-        sb.append(", hadBlackjack=").append(hadBlackjack);
-        
-        sb.append(", Cards: ");
-        for (int i = 0; i < playerHand.size(); i++) {
-            if (i > 0) sb.append(" + ");
-            sb.append(playerHand.get(i).getRank()); //show card ranks
-        }
-        
-        return sb.toString();
-    }
+
 
     public boolean hadBlackjack() {
         System.out.println("hadBlackjack() called - returning: " + this.hadBlackjack);
@@ -268,47 +256,67 @@ public class BlackJack {
         return playerHand; //return player cards
     }
     
+    
     public List<Card> getDealerHand() { 
         return dealerHand; //return dealer cards
     }
     
+    
     public int getPlayerScore() {
         return playerScore;  //return player score
     }
+    
+    
     public int getDealerScore() {
         return dealerScore;  //return dealer score
     }
+    
+    
     public String getGameResult() {
        return gameResult; //return game result message
     }
+    
+    
     public int getPlayerBalance() {
         return playerBalance; //returns current balance
     }
+    
+    
     public int getCurrentBet() {
         return betAmount; //returns the current bet amount
     }
+    
+    
     public boolean isGameOver() {
         return gameOver; //return game over status
     }
+    
+    
     public boolean isDealerTurn() {
         return dealerTurn; //return whose turn it is
     }
+    
+    
     public boolean areCardsDealt() {
         return cardsDealt; //return if cards have been dealt
     }
+    
 
     public boolean canPlayerHit() { 
         return !gameOver && playerScore < 21 && betAmount > 0 && cardsDealt;  //hit conditions
     }
 
+    
     public boolean canPlayerStand() {
         return !gameOver && betAmount > 0 && playerScore <= 21 && cardsDealt; //stand conditions
     }
 
+    
     public boolean shouldShowAllDealerCards() {
         return gameOver || dealerTurn; //sdhow all cards when game over or dealers turn
     }
 
+    
     public boolean isPlayerWinner() {
         
         if (!gameOver){//game must be over to determine winner

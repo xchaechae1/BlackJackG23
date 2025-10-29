@@ -1,9 +1,16 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package BlackJackGUI.view;
 
 import BlackJackGUI.controller.GameControl;
 import javax.swing.*;
 import java.awt.*; //gbc (grid bag constraints)
-
+/**
+ *
+ * @author nicho
+ */
 public class RegisterPanel extends JPanel {
     public RegisterPanel(GameControl controller) {
         setBackground(BlackJackGUI.BACKGROUND_COLOR);

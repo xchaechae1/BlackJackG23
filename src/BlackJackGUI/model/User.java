@@ -1,8 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package BlackJackGUI.model;
 
 /**
- * Represents a player/user in the Blackjack game.
- * Holds basic account data like username and balance.
+ *
+ * @author nicho
  */
 public class User {
 
@@ -33,26 +37,32 @@ public class User {
         return username; //returns username
     }
 
+    
     public void setUsername(String username) {
         this.username = username; //set username
     }
 
+    
     public String getPassword() {
         return password; //return password
     }
 
+    
     public void setPassword(String password) {
         this.password = password; //set password
     }
 
+    
     public int getBalance() {
         return balance; //return current balance
     }
 
+    
     public void setBalance(int balance) {
         this.balance = balance; //set balance
     }
 
+    
     // --- Game-related methods ---
     public void adjustBalance(int amount) {
         this.balance += amount; //add or subtract from balance
