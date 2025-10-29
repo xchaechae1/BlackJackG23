@@ -40,10 +40,10 @@ public class DatabaseStarter {
         try {
             System.out.println("Starting Derby network server...");
             
-            // Find derby home
+            //find derby home
             String derbyHome = System.getProperty("derby.home");
             if (derbyHome == null) {
-                // Try common derby locations
+                //try common derby locations
                 derbyHome = findDerbyHome();
             }
             
@@ -61,14 +61,14 @@ public class DatabaseStarter {
             pb.redirectErrorStream(true);
             Process process = pb.start();
             
-            // Wait a bit for server to start
+            //wait a bit for server to start
             Thread.sleep(5000);
             
             if (isServerRunning()) {
-                System.out.println("✓ Derby network server started successfully");
+                System.out.println("Derby network server started successfully");
                 return true;
             } else {
-                System.err.println("✗ Failed to start Derby server");
+                System.err.println("Failed to start Derby server");
                 return false;
             }
             
